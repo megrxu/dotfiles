@@ -1,0 +1,38 @@
+# ignore everything first
+*
+
+# README and .gitignore
+!.gitignore
+!README.md
+
+# bash
+!bash
+bash/*
+!bash/.bashrc
+!bash/.bash_profile
+
+# zsh
+!zsh
+zsh/*
+!zsh/.zshrc
+
+# fish
+!fish
+!fish/**
+
+# gitconfig
+!gitconfig
+!gitconfig/*
+
+# ibus
+!ibus
+!ibus/.config
+!ibus/.config/ibus
+!ibus/.config/ibus/rime
+!ibus/.config/ibus/rime/*.custom.yaml
+
+# latexindent
+!latexindent
+!latexindent/.config
+!latexindent/.config/latexindent
+!latexindent/.config/latexindent/*.yaml
