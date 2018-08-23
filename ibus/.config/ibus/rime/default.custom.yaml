@@ -1,0 +1,4 @@
+patch:
+  schema_list:
+    - schema: double_pinyin_flypy  # 小鶴雙拼
+    - schema: emoji                # emoji 表情
