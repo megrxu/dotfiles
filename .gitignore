@@ -36,3 +36,12 @@ zsh/*
 !latexindent/.config
 !latexindent/.config/latexindent
 !latexindent/.config/latexindent/*.yaml
+
+# fontconfig
+!fontconfig
+!fontconfig/.config
+!fontconfig/.config/fontconfig
+!fontconfig/.config/fontconfig/fonts.conf
+
+
+

@@ -35,3 +35,5 @@ dotfiles-init() {
 dotfiles-rebuild() {
         stow --dir=$DOTFILES --target=$HOME -vv $@
 }
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
