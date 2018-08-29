@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/ray/.oh-my-zsh"
+export ZSH="/home/ray/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -66,6 +66,14 @@ plugins=(
 )
 
 
+# Load motd
+if [[ -d ~/.motd/cat.d ]];then
+  ls ~/.motd.d/cat.d | sort -R |tail -$N | while read file;do
+    cat $file
+  done
+fi
+
+
 # dotfiles functions
 DOTFILES=~/dotfiles
 dotfiles-count() {
@@ -102,7 +110,7 @@ dotfiles-rebuild() {
 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 
 # User configuration
