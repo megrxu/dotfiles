@@ -47,3 +47,14 @@ zsh/*
 !htop/.config
 !htop/.config/htop/*
 
+# i3
+!i3
+!i3/.config
+!i3/.config/i3/*
+
+# i3blocks
+!i3blocks
+!i3blocks/.config
+!i3blocks/.config/i3blocks/*
+
+

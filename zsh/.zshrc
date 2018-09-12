@@ -116,6 +116,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # User configuration
 
 export LANG=en_US.UTF-8
+export TERMINAL=konsole
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
