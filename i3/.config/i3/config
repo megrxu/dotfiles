@@ -185,7 +185,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3blocks
 }
 
 
@@ -198,6 +198,7 @@ exec --no-startup-id nitrogen --restore
 
 ## Start ibus daemon
 exec --no-startup-id ibus-daemon --xim -d -r
+exec --no-startup-id dunst
 
 ## Auto lock 
 exec --no-startup-id xautolock -time 10 -locker "bash /home/ray/.scripts/lock.sh" &

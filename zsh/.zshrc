@@ -121,6 +121,9 @@ export TERMINAL=konsole
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# path
+export PATH=/home/ray/.scripts/:$PATH
+
 # aliases
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
