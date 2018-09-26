@@ -137,7 +137,7 @@ lookForPreamble:
 preambleCommandsBeforeEnvironments: 0
 
 # Default value of indentation
-defaultIndent: "  "
+defaultIndent: "    "
 
 # environments that have tab delimiters, add more 
 # as needed
