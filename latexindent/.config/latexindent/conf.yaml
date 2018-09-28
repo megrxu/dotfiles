@@ -170,6 +170,7 @@ lookForAlignDelims:
    cases: 1
    dcases: 1
    listabla: 1
+   eqnarray: 1
 
 # if you want the script to look for \item commands 
 # and format it, as follows (for example),
