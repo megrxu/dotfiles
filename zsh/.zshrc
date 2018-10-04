@@ -111,6 +111,7 @@ dotfiles-rebuild() {
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 
 # User configuration
@@ -122,7 +123,8 @@ export TERMINAL=konsole
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # path
-export PATH=/home/ray/.scripts/:$PATH
+export PATH=$HOME/.scripts/:$PATH
+export TEXMFHOME=$HOME/.texmf
 
 # aliases
 alias zshconfig="mate ~/.zshrc"
@@ -130,3 +132,9 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+PATH="/home/ray/.perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/ray/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/ray/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/ray/.perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/ray/.perl5"; export PERL_MM_OPT;

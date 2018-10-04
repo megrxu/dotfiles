@@ -25,24 +25,26 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 command=/usr/lib/i3blocks/$BLOCK_NAME
+color=#f3f4f5
 separator=true
 separator_block_width=15
 markup=none
 
 # Volume indicator
 [volume]
-label=♪
+label=
 instance=Master
 interval=5
 signal=10
 
 # Memory usage
 [memory]
-label=MEM
+label=
 interval=30
 
 # Disk usage
 [disk]
+label=
 interval=30
 
 # Network interface monitoring
@@ -50,6 +52,11 @@ interval=30
 color=#00FF00
 interval=10
 command=iwgetid -r
+
+[bandwidth]
+label=
+instance=eno2
+interval=1
 
 # Battery indicator
 [battery]
@@ -65,5 +72,6 @@ interval=30
 
 # Date Time
 [time]
+label=
 command=date '+%a, %d %b %H:%M'
 interval=30
