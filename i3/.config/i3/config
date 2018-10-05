@@ -15,16 +15,10 @@ set $mod Mod1
 # is used in the bar {} block below.
 font pango: "Roboto" 16
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
+# class                 border  backgr. text    indicator child_border
+client.focused          #105187 #105187 #ffffff #2e9ef4   #285577
+client.focused_inactive #5f676a #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #07253D #07253D #888888 #292d2e   #222222
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -119,16 +113,32 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 # define names for workspaces
-set $ws1    "1"
-set $ws2    "2"
-set $ws3    "3"
-set $ws4    "4"
-set $ws5    "5"
-set $ws6    "6"
-set $ws7    "7"
-set $ws8    "8"
-set $ws9    "9"
-set $ws10   "10"
+set $ws1    "1:  Terminal "
+set $ws2    "2:  Code "
+set $ws3    "3:  Chrome "
+set $ws4    "4:  Files "
+set $ws5    "5:  Documents "
+set $ws6    "6:  Media "
+set $ws7    "7:  Design "
+set $ws8    "8:  Chat "
+set $ws9    "9:  General "
+set $ws10   "10:  Settings "
+
+# assign program to workspace
+assign [class="konsole"]            → $ws1
+assign [class="Code"]               → $ws2
+assign [class="Google-chrome"]      → $ws3
+assign [class="Nautilus"]           → $ws4
+assign [class="Evince"]             → $ws5
+assign [class="vlc"]                → $ws6
+assign [class="Telegram"]           → $ws8
+assign [class="electronic-wechat"]  → $ws8
+assign [class="VirtualBox Manager"] → $ws8
+assign [class="Gnome-disks"]        → $ws10
+assign [class="arandr"]             → $ws10
+
+# auto focus
+for_window [class=(?i)] focus
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -191,15 +201,20 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks
+    status_command i3blocks
+    colors {
+        background #000000
+        statusline #ffffff
+        separator #666666
+        focused_workspace  #105187 #105187 #ffffff
+    }
 }
 
 
-#exec --no-startup-id xrandr && bash "/home/ray/.screenlayout/all-1080.sh"
 ## TouchPad Configurations
-exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' "libinput Natural Scrolling Enabled" 1
-exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' "libinput Tapping Enabled" 1
-exec --no-startup-id xrandr && bash "/home/ray/.screenlayout/all-1080.sh"
+#exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' "libinput Natural Scrolling Enabled" 1
+#exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' "libinput Tapping Enabled" 1
+#exec --no-startup-id xrandr && bash "/home/ray/.screenlayout/all-1080.sh"
 exec --no-startup-id nitrogen --restore
 
 ## Start ibus daemon

@@ -57,4 +57,9 @@ zsh/*
 !i3blocks/.config
 !i3blocks/.config/i3blocks/*
 
+# rofi
+!rofi
+!rofi/.config
+!rofi/.config/rofi/*
+
 
