@@ -125,19 +125,22 @@ set $ws9    " General "
 set $ws10   " Settings "
 
 # assign program to workspace
-assign [class="konsole"]            → $ws1
-assign [class="Code"]               → $ws2
-assign [class="Google-chrome"]      → $ws3
-assign [class="Nautilus"]           → $ws4
-assign [class="Evince"]             → $ws5
-assign [class="vlc"]                → $ws6
-assign [class="netease-cloud-music"]→ $ws6
-assign [class="GeoGebra"]           → $ws7
-assign [class="Telegram"]           → $ws8
-assign [class="electronic-wechat"]  → $ws8
-assign [class="VirtualBox Manager"] → $ws8
-assign [class="Gnome-disks"]        → $ws10
-assign [class="arandr"]             → $ws10
+assign [class="konsole"]              $ws1
+assign [class="Code"]                 $ws2
+assign [class="Google-chrome"]        $ws3
+assign [class="Nautilus"]             $ws4
+assign [class="Evince"]               $ws5
+assign [class="wps"]                  $ws5
+assign [class="^et$"]                 $ws5
+assign [class="^wpp$"]                $ws5
+assign [class="vlc"]                  $ws6
+assign [class="netease-cloud-music"]  $ws6
+assign [class="GeoGebra"]             $ws7
+assign [class="Telegram"]             $ws8
+assign [class="electronic-wechat"]    $ws8
+assign [class="VirtualBox Manager"]   $ws8
+assign [class="Gnome-disks"]          $ws10
+assign [class="arandr"]               $ws10
 
 # auto focus
 for_window [class=(?i)] focus

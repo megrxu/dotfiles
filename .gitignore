@@ -62,4 +62,7 @@ zsh/*
 !rofi/.config
 !rofi/.config/rofi/*
 
-
+# dunst
+!dunst
+!dunst/.config
+!dunst/.config/dunst/*
