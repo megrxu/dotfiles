@@ -20,6 +20,10 @@ zsh/*
 !fish
 !fish/**
 
+# xinit
+!xinit
+!xinit/*
+
 # gitconfig
 !gitconfig
 !gitconfig/*
@@ -66,3 +70,10 @@ zsh/*
 !dunst
 !dunst/.config
 !dunst/.config/dunst/*
+
+# alacritty
+!alacritty
+!alacritty/.config
+!alacritty/.config/alacritty/*
+
+
