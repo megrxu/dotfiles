@@ -113,7 +113,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-alias cat=bat
+powerline-daemon -q
+. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+alias cat="bat --style='grid' --color="always""
 alias t=trizen
 
 # User configuration
@@ -135,7 +138,7 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-PATH="/home/ray/.perl5/bin${PATH:+:${PATH}}"; export PATH;
+PATH="/home/ray/.perl5/bin:/home/ray/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/ray/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/ray/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/ray/.perl5\""; export PERL_MB_OPT;

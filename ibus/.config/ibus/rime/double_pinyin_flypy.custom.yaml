@@ -12,3 +12,8 @@ patch:
     - name: ascii_punct
       states: ["。，", "．，"]
 
+__patch:
+# Rx: emoji:customize:schema=double_pinyin_flypy {
+  - patch/+:
+      __include: emoji_suggestion:/patch
+# }
