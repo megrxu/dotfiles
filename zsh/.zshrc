@@ -118,11 +118,11 @@ powerline-daemon -q
 
 alias cat="bat --style='grid' --color="always""
 alias t=trizen
+alias b=blackman
 
 # User configuration
 
 export LANG=en_US.UTF-8
-export TERMINAL=konsole
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
