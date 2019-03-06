@@ -116,8 +116,9 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 powerline-daemon -q
 . /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
-alias cat="bat --style='grid' --color="always""
+alias cat="bat --style='grid' --color="always" --paging never"
 alias t=trizen
+alias pro="proxychains -q"
 
 # User configuration
 
@@ -135,6 +136,8 @@ export TEXMFHOME=$HOME/.texmf
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# thefuck
+eval $(thefuck --alias)
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
