@@ -119,11 +119,11 @@ powerline-daemon -q
 alias cat="bat --style='grid' --color="always" --paging never"
 alias t=trizen
 alias pro="proxychains -q"
+alias b=blackman
 
 # User configuration
 
 export LANG=en_US.UTF-8
-export TERMINAL=konsole
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
