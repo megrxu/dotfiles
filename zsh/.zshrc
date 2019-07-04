@@ -8,16 +8,26 @@ prompt pure
 
 # Auto Completion
 compinit
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+eval "$(dircolors)"
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # History Share
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=5000
 HISTDUP=erase
+
 setopt appendhistory
 setopt sharehistory
 setopt incappendhistory
+setopt EXTENDED_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_BEEP
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -85,6 +95,9 @@ alias ll='ls -la'
 alias la='ls -a'
 alias ..="cd .."
 
+# true color
+export TERM=xterm-256color
+
 #lang
 export LANG=en_US.UTF-8
 
@@ -92,7 +105,7 @@ export LANG=en_US.UTF-8
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # path
-export PATH=$HOME/.scripts:$PATH
+export PATH=$HOME/.scripts:$HOME/.cargo/bin:$HOME/.npm-global/bin:$PATH
 export TEXMFHOME=$HOME/.texmf
 
 PATH="/home/ray/.perl5/bin:/home/ray/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"; export PATH;
@@ -100,3 +113,6 @@ PERL5LIB="/home/ray/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/ray/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/ray/.perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/ray/.perl5"; export PERL_MM_OPT;
+
+# opam configuration
+test -r /home/ray/.opam/opam-init/init.zsh && . /home/ray/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

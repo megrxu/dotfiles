@@ -154,6 +154,8 @@ lookForAlignDelims:
    tabularx:
       delims: 1
    longtable: 1
+   xymatrix: 1
+   displaymath: 1
    tabular*: 1
    tabu: 1
    array: 1

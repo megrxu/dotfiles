@@ -1,5 +1,8 @@
-rofi.theme: Arc-Dark
-rofi.font: Meslo LG M, Noto Sans CJK TC 16
-rofi.columns: 2
+
+rofi.font: Fira Sans, 18
+rofi.columns: 3
+rofi.width: 90
+rofi.lines: 20
 rofi.show-icons: true
 rofi.display-drun: Search
+rofi.theme: /usr/share/rofi/themes/Paper.rasi
