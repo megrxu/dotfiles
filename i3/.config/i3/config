@@ -27,7 +27,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+q kill 
 
 # lock screen
 #bindsym MOD4+l exec bash /home/ray/.scripts/lock.sh
@@ -111,28 +111,31 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+bindsym MOD4+D workspace conky
+bindsym --release MOD4+D  workspace back_and_forth
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 # define names for workspaces
-set $ws1    " Terminal | 1 "
-set $ws2    " Code | 2 "
-set $ws3    " Chrome | 3 "
-set $ws4    " Files | 4 "
-set $ws5    " Documents | 5 "
-set $ws6    " Media | 6 "
-set $ws7    " Design | 7 "
-set $ws8    " Chat | 8 "
-set $ws9    " General | 9 "
-set $ws10   " Settings | A "
+set $ws1    "😼 Code | 1 "
+set $ws2    "🕹️ Terminal | 2 "
+set $ws3    "🌐 Browser | 3 "
+set $ws4    "📁 Files | 4 "
+set $ws5    "📄 Documents | 5 "
+set $ws6    "🎵 Media | 6 "
+set $ws7    "🎨 Design | 7 "
+set $ws8    "💬 Chat | 8 "
+set $ws9    "📺 General | 9 "
+set $ws10   "⚙️S Settings | A "
 
 # assign program to workspace
-assign [class="konsole"]              $ws1
-assign [class="Alacritty"]            $ws1
-assign [class="kitty"]            $ws1
-assign [class="Code"]                 $ws2
+assign [class="konsole"]              $ws2
+assign [class="Alacritty"]            $ws2
+assign [class="kitty"]                $ws2
+assign [class="Code"]                 $ws1
 assign [class="Google-chrome"]        $ws3
-assign [class="dolphin"]             $ws4
-assign [class="Seafile Client"]             $ws4
+assign [class="dolphin"]              $ws4
+assign [class="Seafile Client"]       $ws4
 assign [class="okular"]               $ws5
 assign [class="wps"]                  $ws5
 assign [class="^et$"]                 $ws5
@@ -227,8 +230,9 @@ bar {
 ## TouchPad Configurations
 #exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' "libinput Natural Scrolling Enabled" 1
 #exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' "libinput Tapping Enabled" 1
-exec --no-startup-id xrandr && xrdb /home/ray/.Xresources && bash "/home/ray/.screenlayout/normal.sh" && nitrogen --restore
-#exec --no-startup-id nitrogen --restore
+exec --no-startup-id xrandr && xrdb /home/ray/.Xresources && bash "/home/ray/.screenlayout/normal.sh"
+exec --no-startup-id conky
+exec --no-startup-id nitrogen --restore
 
 ## Start ibus daemon
 exec --no-startup-id ibus-daemon --xim -d -r

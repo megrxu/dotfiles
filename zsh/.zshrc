@@ -37,6 +37,8 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 # Bindkeys
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "^[[3;5~" kill-word
+bindkey '^H' backward-kill-word
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
@@ -90,6 +92,8 @@ alias ls=exa
 alias pacman="sudo pacman"
 alias netctl="sudo netctl"
 alias zjunet="sudo zjunet"
+alias start-net="netctl start ethernet && zjunet vpn -c"
+alias stop-net="netctl stop ethernet"
 
 alias ll='ls -la'
 alias la='ls -a'

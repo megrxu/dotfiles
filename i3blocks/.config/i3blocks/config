@@ -30,21 +30,14 @@ separator=true
 separator_block_width=15
 markup=none
 
-# Volume indicator
-[volume]
-label=
-instance=Master
-interval=5
-signal=10
-
 # Memory usage
 [memory]
-label=
+label=💻
 interval=30
 
 # Disk usage
 [disk]
-label=
+label=💾
 interval=30
 
 # Network interface monitoring
@@ -54,7 +47,7 @@ interval=10
 command=iwgetid -r
 
 [bandwidth]
-label=
+label=⚡
 instance=eno2
 interval=1
 
@@ -70,8 +63,15 @@ label=[1]
 instance=1
 interval=30
 
+# Volume indicator
+[volume]
+label=🔊
+instance=Master
+interval=5
+signal=10
+
 # Date Time
 [time]
-label=
+label=🕒
 command=date '+%a, %d %b %H:%M'
 interval=30
