@@ -111,8 +111,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-bindsym MOD4+D workspace conky
-bindsym --release MOD4+D  workspace back_and_forth
+#bindsym MOD4+D workspace conky
+#bindsym --release MOD4+D  workspace back_and_forth
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -231,9 +231,9 @@ bar {
 #exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' "libinput Natural Scrolling Enabled" 1
 #exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' "libinput Tapping Enabled" 1
 exec --no-startup-id xrandr && xrdb /home/ray/.Xresources && bash "/home/ray/.screenlayout/normal.sh"
-exec --no-startup-id conky
+#exec --no-startup-id conky
 exec --no-startup-id nitrogen --restore
 
 ## Start ibus daemon
 exec --no-startup-id ibus-daemon --xim -d -r
-exec --no-startup-id dunst
+#exec --no-startup-id dunst

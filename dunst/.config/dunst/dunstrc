@@ -1,5 +1,5 @@
 [global]
-font = Iosevka Term 16
+font = Fira Sans
 
 # Allow a small subset of html markup:
 #   <b>bold</b>
@@ -70,7 +70,7 @@ hide_duplicates_count = yes
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
 #geometry = "250x50-40+40"
-geometry = "400x50-40+40"
+geometry = "400x50-40-40"
 
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
@@ -148,14 +148,14 @@ dmenu = /usr/bin/dmenu -p dunst:
 browser = /usr/bin/firefox -new-tab
 
 # Align icons left/right/off
-icon_position = off
+icon_position = left
 max_icon_size = 80
 
 # Paths to default icons.
 icon_path = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
-frame_width = 3
-frame_color = "#8EC07C"
+frame_width = 0
+frame_color = "#FFFFFF"
 
 [shortcuts]
 
@@ -181,21 +181,21 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#2C8693"
-foreground = "#2C8693"
-background = "#F0F1D5"
+frame_color = "#FFFFFF"
+foreground = "#3D3D3D"
+background = "#FFFFFF"
 timeout = 4
 
 [urgency_normal]
-frame_color = "#105187"
-foreground = "#105187"
-background = "#F0F1D5"
+frame_color = "#FFFFFF"
+foreground = "#3D3D3D"
+background = "#FFFFFF"
 timeout = 6
 
 [urgency_critical]
-frame_color = "#C33325"
-foreground = "#C33325"
-background = "#F0F1D5"
+frame_color = "#E82B0E"
+foreground = "#FFFFFF"
+background = "#E82B0E"
 timeout = 8
 
 
