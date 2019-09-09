@@ -24,11 +24,17 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/lib/i3blocks/$BLOCK_NAME
+command=$HOME/.config/i3blocks/i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
 color=#f3f4f5
 separator=true
 separator_block_width=15
 markup=none
+
+# Arch Update
+[arch-update]
+interval=3600
+markup=pango
+LABEL=Updates: 
 
 # Memory usage
 [memory]

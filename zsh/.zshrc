@@ -5,11 +5,14 @@ autoload -U compinit promptinit
 
 promptinit
 prompt pure
+PROMPT='%(?.⚡️.❗️)%f '
+RPROMPT='%F{white}%*'
 
 # Auto Completion
 compinit
 eval "$(dircolors)"
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+fpath=( ~/.zfunc "${fpath[@]}" )
 
 # History Share
 HISTSIZE=5000
