@@ -16,9 +16,9 @@ set $mod Mod1
 font pango: 'Fira Sans' 13
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #105187 #105187 #ffffff #2e9ef4   #285577
-client.focused_inactive #5f676a #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #07253D #07253D #888888 #292d2e   #222222
+client.focused          #444444 #444444 #dfdfdf #444444   #444444
+client.focused_inactive #333333 #333333 #dfdfdf #333333   #333333
+client.unfocused        #222222 #222222 #dfdfdf #222222   #222222
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -117,16 +117,16 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 # define names for workspaces
-set $ws1    "😼 Code | 1 "
-set $ws2    "🕹️ Terminal | 2 "
-set $ws3    "🌐 Browser | 3 "
-set $ws4    "📁 Files | 4 "
-set $ws5    "📄 Documents | 5 "
-set $ws6    "🎵 Media | 6 "
-set $ws7    "🎨 Design | 7 "
-set $ws8    "💬 Chat | 8 "
-set $ws9    "📺 General | 9 "
-set $ws10   "⚙️S Settings | A "
+set $ws1    "😼 Code "
+set $ws2    "🕹️ Terminal "
+set $ws3    "🌊 Browser "
+set $ws4    "📁 Files "
+set $ws5    "📄 Documents "
+set $ws6    "🎵 Media "
+set $ws7    "🎨 Design "
+set $ws8    "💬 Chat "
+set $ws9    "📺 General "
+set $ws10   "⚙️ Settings "
 
 # assign program to workspace
 assign [class="konsole"]              $ws2
@@ -215,16 +215,16 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    status_command i3blocks
-	tray_output primary
-    colors {
-        background #000000
-        statusline #ffffff
-        separator #666666
-        focused_workspace  #105187 #105187 #ffffff
-    }
-}
+#bar {
+#    status_command i3blocks
+#	tray_output primary
+#    colors {
+#        background #000000
+#        statusline #ffffff
+#        separator #666666
+#        focused_workspace  #105187 #105187 #ffffff
+#    }
+#}
 
 
 ## TouchPad Configurations
@@ -237,3 +237,6 @@ exec --no-startup-id nitrogen --restore
 ## Start ibus daemon
 exec --no-startup-id ibus-daemon --xim -d -r
 #exec --no-startup-id dunst
+
+## Polybar
+exec --no-startup-id $HOME/.config/polybar/launch.sh
