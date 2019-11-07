@@ -153,6 +153,10 @@ assign [class="arandr"]               $ws10
 # auto focus
 for_window [class=(?i)] focus
 
+# auto float
+for_window [class="qq"] floating enable
+for_window [class="Qq"] floating enable
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -234,9 +238,11 @@ exec --no-startup-id xrandr && xrdb /home/ray/.Xresources && bash "/home/ray/.sc
 #exec --no-startup-id conky
 exec --no-startup-id nitrogen --restore
 
-## Start ibus daemon
-exec --no-startup-id ibus-daemon --xim -d -r
-#exec --no-startup-id dunst
+# Polkit Agent
+exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
+
+## Start fcitx5
+exec --no-startup-id fcitx5 &
 
 ## Polybar
 exec --no-startup-id $HOME/.config/polybar/launch.sh

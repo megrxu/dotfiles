@@ -112,7 +112,7 @@ export LANG=en_US.UTF-8
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # path
-export PATH=$HOME/.scripts:$HOME/.cargo/bin:$HOME/.npm-global/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.scripts:$HOME/.cargo/bin:$HOME/.npm-global/bin:$PATH
 export TEXMFHOME=$HOME/.texmf
 
 PATH="/home/ray/.perl5/bin:/home/ray/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"; export PATH;
