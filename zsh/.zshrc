@@ -4,9 +4,9 @@
 autoload -U compinit promptinit
 
 promptinit
+zstyle ':prompt:pure:prompt:success' color cyan
+zstyle ':prompt:pure:prompt:error' color yellow
 prompt pure
-PROMPT='%(?.⚡️.❗️)%f '
-RPROMPT='%F{white}%*'
 
 # Auto Completion
 compinit
