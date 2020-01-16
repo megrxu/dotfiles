@@ -97,6 +97,7 @@ alias netctl="sudo netctl"
 alias zjunet="sudo zjunet"
 alias start-net="netctl start ethernet && zjunet vpn -c"
 alias stop-net="netctl stop ethernet"
+alias emacs="emacs -nw"
 
 alias ll='ls -la'
 alias la='ls -a'
@@ -112,7 +113,7 @@ export LANG=en_US.UTF-8
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # path
-export PATH=$HOME/.local/bin:$HOME/.scripts:$HOME/.cargo/bin:$HOME/.npm-global/bin:$PATH
+export PATH=$HOME/.cabal/bin:$HOME/.local/bin:$HOME/.scripts:$HOME/.cargo/bin:$HOME/.npm-global/bin:$PATH
 export TEXMFHOME=$HOME/.texmf
 
 PATH="/home/ray/.perl5/bin:/home/ray/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"; export PATH;

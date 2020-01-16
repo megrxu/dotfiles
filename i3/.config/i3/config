@@ -118,7 +118,7 @@ bindsym $mod+a focus parent
 # We use variables to avoid repeating the names in multiple places.
 # define names for workspaces
 set $ws1    "😼 Code "
-set $ws2    "🕹️ Terminal "
+set $ws2    "🕹️Terminal "
 set $ws3    "🌊 Browser "
 set $ws4    "📁 Files "
 set $ws5    "📄 Documents "
@@ -133,6 +133,7 @@ assign [class="konsole"]              $ws2
 assign [class="Alacritty"]            $ws2
 assign [class="kitty"]                $ws2
 assign [class="Code"]                 $ws1
+assign [class="Emacs"]                $ws1
 assign [class="Google-chrome"]        $ws3
 assign [class="dolphin"]              $ws4
 assign [class="Seafile Client"]       $ws4
@@ -144,9 +145,10 @@ assign [class="vlc"]                  $ws6
 assign [class="netease-cloud-music"]  $ws6
 assign [class="GeoGebra"]             $ws7
 assign [class="Telegram"]             $ws8
+assign [class="Signal"]               $ws8
 assign [class="electronic-wechat"]    $ws8
 assign [class="VirtualBox Manager"]   $ws9
-assign [class="Minecraft"]   $ws9
+assign [class="Minecraft"]            $ws9
 assign [class="Gnome-disks"]          $ws10
 assign [class="arandr"]               $ws10
 
@@ -217,25 +219,15 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#    status_command i3blocks
-#	tray_output primary
-#    colors {
-#        background #000000
-#        statusline #ffffff
-#        separator #666666
-#        focused_workspace  #105187 #105187 #ffffff
-#    }
-#}
-
-
 ## TouchPad Configurations
 #exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' "libinput Natural Scrolling Enabled" 1
 #exec --no-startup-id xinput set-prop 'SynPS/2 Synaptics TouchPad' "libinput Tapping Enabled" 1
+
+# Display configuration using `arandr`
 exec --no-startup-id xrandr && xrdb /home/ray/.Xresources && bash "/home/ray/.screenlayout/normal.sh"
 #exec --no-startup-id conky
+
+# Wallpaper
 exec --no-startup-id nitrogen --restore
 
 # Polkit Agent
@@ -244,5 +236,6 @@ exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 ## Start fcitx5
 exec --no-startup-id fcitx5 &
 
-## Polybar
+## Polybar and notification daemon
 exec --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id dunst &
