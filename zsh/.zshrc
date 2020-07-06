@@ -94,10 +94,7 @@ alias pro="proxychains -q"
 alias ls=exa
 alias pacman="sudo pacman"
 alias netctl="sudo netctl"
-alias zjunet="sudo zjunet"
-alias start-net="netctl start ethernet && zjunet vpn -c"
-alias stop-net="netctl stop ethernet"
-alias emacs="emacs -nw"
+alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 
 alias ll='ls -la'
 alias la='ls -a'
@@ -112,9 +109,13 @@ export LANG=en_US.UTF-8
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# gopath
+export GOPATH=$HOME/.go/
+
 # path
-export PATH=$HOME/.cabal/bin:$HOME/.local/bin:$HOME/.scripts:$HOME/.cargo/bin:$HOME/.npm-global/bin:$PATH
+export PATH=$HOME/.cabal/bin:$HOME/.local/bin:$HOME/.scripts:$HOME/.cargo/bin:$HOME/.npm-global/bin:$GOPATH/bin:$PATH
 export TEXMFHOME=$HOME/.texmf
+
 
 PATH="/home/ray/.perl5/bin:/home/ray/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/ray/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -122,5 +123,23 @@ PERL_LOCAL_LIB_ROOT="/home/ray/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_RO
 PERL_MB_OPT="--install_base \"/home/ray/.perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/ray/.perl5"; export PERL_MM_OPT;
 
+# okteto
+export KUBECONFIG="$HOME/Documents/Tools/okteto/okteto-kube.config"
+#export KUBECONFIG="$HOME/Documents/Tools/okteto/okteto-kube.config;$KUBECONFIG;$HOME/.kube/config"
+
+
+
+. "/home/ray/.acme.sh/acme.sh.env"
+
+# pyenv
+
+eval "$(pyenv init -)"
+
 # opam configuration
 test -r /home/ray/.opam/opam-init/init.zsh && . /home/ray/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"

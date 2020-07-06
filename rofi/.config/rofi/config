@@ -1,5 +1,5 @@
 
-rofi.font: Fira Sans, 18
+rofi.font: Cascadia Code, 18
 rofi.columns: 3
 rofi.width: 90
 rofi.lines: 20

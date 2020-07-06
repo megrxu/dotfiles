@@ -3,3 +3,11 @@
 	name = Ray Xu
 [color]
 	ui = auto
+
+[core]
+    pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
+
+[interactive]
+    diffFilter = delta --color-only
+[pull]
+	rebase = false
