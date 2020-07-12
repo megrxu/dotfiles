@@ -4,9 +4,12 @@
 autoload -U compinit promptinit
 
 promptinit
-zstyle ':prompt:pure:prompt:success' color cyan
-zstyle ':prompt:pure:prompt:error' color yellow
+zstyle ':prompt:pure:prompt:success' color '#00AAFF'
+zstyle ':prompt:pure:prompt:error' color '#FFFF00'
 prompt pure
+
+# Color
+ZSH_AUTOSUGGESTION_HIGHLIGHT_COLOR='fg=60'
 
 # Auto Completion
 compinit
@@ -123,4 +126,4 @@ PERL_MB_OPT="--install_base \"/home/ray/.perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/ray/.perl5"; export PERL_MM_OPT;
 
 # opam configuration
-test -r /home/ray/.opam/opam-init/init.zsh && . /home/ray/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r /home/megrxu/.opam/opam-init/init.zsh && . /home/megrxu/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
