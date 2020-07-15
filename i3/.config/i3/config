@@ -225,9 +225,8 @@ bindsym $mod+r mode "resize"
 
 # Display configuration using `arandr`
 exec --no-startup-id xrandr && xrdb /home/ray/.Xresources && bash "/home/ray/.screenlayout/normal.sh"
-#exec --no-startup-id conky
 
-# Wallpaper
+# Wallpaper and picom
 exec --no-startup-id nitrogen --restore
 
 # Polkit Agent
