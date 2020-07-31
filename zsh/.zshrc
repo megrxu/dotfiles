@@ -117,7 +117,7 @@ export PATH=$HOME/.cabal/bin:$HOME/.local/bin:$HOME/.scripts:$HOME/.cargo/bin:$H
 export TEXMFHOME=$HOME/.texmf
 
 
-PATH="/home/ray/.perl5/bin:/home/ray/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"; export PATH;
+PATH="$HOME/.perl5/bin:$HOME/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/ray/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/ray/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/ray/.perl5\""; export PERL_MB_OPT;
@@ -129,7 +129,7 @@ export KUBECONFIG="$HOME/Documents/Tools/okteto/okteto-kube.config"
 
 
 
-. "/home/ray/.acme.sh/acme.sh.env"
+. "$HOME/.acme.sh/acme.sh.env"
 
 # utils
 
@@ -137,7 +137,7 @@ eval "$(pyenv init -)"
 eval $(thefuck --alias)
 
 # opam configuration
-test -r /home/ray/.opam/opam-init/init.zsh && . /home/ray/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
