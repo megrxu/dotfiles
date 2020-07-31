@@ -131,9 +131,10 @@ export KUBECONFIG="$HOME/Documents/Tools/okteto/okteto-kube.config"
 
 . "/home/ray/.acme.sh/acme.sh.env"
 
-# pyenv
+# utils
 
 eval "$(pyenv init -)"
+eval $(thefuck --alias)
 
 # opam configuration
 test -r /home/ray/.opam/opam-init/init.zsh && . /home/ray/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
