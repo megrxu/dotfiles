@@ -92,8 +92,7 @@ dotfiles-rebuild() {
 alias bat="bat --style='grid' --color='always' --paging never"
 alias pro="proxychains -q"
 alias ls=exa
-alias pacman="sudo pacman"
-alias netctl="sudo netctl"
+alias pacman="yay"
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 
 alias ll='ls -la'
@@ -133,8 +132,8 @@ export KUBECONFIG="$HOME/Documents/Tools/okteto/okteto-kube.config"
 
 # utils
 
-eval "$(pyenv init -)"
 eval $(thefuck --alias)
+eval "$(pyenv init -)"
 
 # opam configuration
 test -r /home/ray/.opam/opam-init/init.zsh && . /home/ray/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
