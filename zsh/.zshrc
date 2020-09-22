@@ -11,8 +11,10 @@ prompt pure
 # Auto Completion
 compinit
 eval "$(dircolors)"
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 fpath=( ~/.zfunc "${fpath[@]}" )
+source ~/.zfunctions/fzf-tab/fzf-tab.plugin.zsh
 
 # History Share
 HISTSIZE=5000
