@@ -137,7 +137,7 @@ lookForPreamble:
 preambleCommandsBeforeEnvironments: 0
 
 # Default value of indentation
-defaultIndent: "    "
+defaultIndent: "  "
 
 # environments that have tab delimiters, add more 
 # as needed
@@ -400,7 +400,7 @@ modifyLineBreaks:
     preserveBlankLines: 1
     condenseMultipleBlankLinesInto: 1
     textWrapOptions:
-        columns: 0
+        columns: 80
         separator: ""
     oneSentencePerLine:
         manipulateSentences: 0     

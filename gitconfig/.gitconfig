@@ -1,6 +1,7 @@
 [user]
 	email = megrxu@gmail.com
 	name = Ray Xu
+	signingkey = 183EB3A42B99CED3
 [color]
 	ui = auto
 
@@ -11,3 +12,7 @@
     diffFilter = delta --color-only
 [pull]
 	rebase = false
+[commit]
+	gpgsign = true
+[alias]
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"

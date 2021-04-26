@@ -94,7 +94,6 @@ dotfiles-rebuild() {
 alias bat="bat --style='grid' --color='always' --paging never"
 alias pro="proxychains -q"
 alias ls=exa
-alias pacman="yay"
 alias tlmgr='/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode'
 
 alias ll='ls -la'
@@ -114,11 +113,9 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export GOPATH=$HOME/.go/
 
 # path
-export PATH=$HOME/.cabal/bin:$HOME/.local/bin:$HOME/.scripts:$HOME/.cargo/bin:$HOME/.npm-global/bin:$GOPATH/bin:$PATH
 export TEXMFHOME=$HOME/.texmf
 
 
-PATH="$HOME/.perl5/bin:$HOME/.config/yarn/global/node_modules/.bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/ray/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/ray/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/ray/.perl5\""; export PERL_MB_OPT;
@@ -127,8 +124,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/ray/.perl5"; export PERL_MM_OPT;
 # okteto
 export KUBECONFIG="$HOME/Documents/Tools/okteto/okteto-kube.config"
 #export KUBECONFIG="$HOME/Documents/Tools/okteto/okteto-kube.config;$KUBECONFIG;$HOME/.kube/config"
-
-
 
 . "$HOME/.acme.sh/acme.sh.env"
 
