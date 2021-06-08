@@ -135,6 +135,7 @@ assign [class="kitty"]                $ws2
 assign [class="Code"]                 $ws1
 assign [class="Emacs"]                $ws1
 assign [class="Google-chrome"]        $ws3
+assign [class="firefox"]              $ws3
 assign [class="dolphin"]              $ws4
 assign [class="Seafile Client"]       $ws4
 assign [class="okular"]               $ws5
@@ -238,3 +239,5 @@ exec --no-startup-id fcitx5 &
 ## Polybar and notification daemon
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst &
+
+## GUI Applications
