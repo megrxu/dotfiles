@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 autoload -U compinit promptinit
 
 promptinit
@@ -56,7 +53,7 @@ if [[ -d ~/.motd/cat.d ]];then
 fi
 
 # dotfiles functions
-DOTFILES=~/dotfiles
+DOTFILES=~/.dotfiles
 dotfiles-count() {
         pushd >/dev/null 2>&1
         cd $HOME
@@ -114,7 +111,8 @@ export GOPATH=$HOME/.go/
 
 # path
 export TEXMFHOME=$HOME/.texmf
-
+export PATH=$HOME/.local/bin:$PATH
+export PATH="$HOME/.ghcup/bin:$HOME/.rbenv/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$PATH"
 
 PERL5LIB="/home/ray/.perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/home/ray/.perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
@@ -130,10 +128,15 @@ export KUBECONFIG="$HOME/Documents/Tools/okteto/okteto-kube.config"
 # utils
 
 eval $(thefuck --alias)
-
+eval "$(pyenv init -)"
 
 # opam configuration
 test -r $HOME/.opam/opam-init/init.zsh && . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+eval "$(rbenv init -)"
+
+# Load bw session
+test -r $HOME/.bwenv && . $HOME/.bwenv || true
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"

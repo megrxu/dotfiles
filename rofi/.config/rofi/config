@@ -1,8 +1,0 @@
-
-rofi.font: sans-serif, 18
-rofi.columns: 3
-rofi.width: 90
-rofi.lines: 20
-rofi.show-icons: true
-rofi.display-drun: Search
-rofi.theme: /usr/share/rofi/themes/Paper.rasi

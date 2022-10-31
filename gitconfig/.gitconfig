@@ -6,7 +6,7 @@
 	ui = auto
 
 [core]
-    pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
+    pager = delta
 
 [interactive]
     diffFilter = delta --color-only
@@ -16,3 +16,9 @@
 	gpgsign = true
 [alias]
 	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+[init]
+	defaultBranch = master
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+[diff]
+	external = difft

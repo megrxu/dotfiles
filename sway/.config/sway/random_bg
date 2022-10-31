@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+import glob, random, sys
+src = sys.argv[1]
+walls = glob.glob(src + "/*.*")
+print(random.choice(walls))
